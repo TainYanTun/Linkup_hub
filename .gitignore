@@ -1,0 +1,8 @@
+# Node.js
+node_modules
+
+# Frontend specific ignores
+frontend/node_modules
+
+# Backend specific ignores
+backend/node_modules
