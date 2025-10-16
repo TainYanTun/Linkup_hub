@@ -10,16 +10,16 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     console.log("start liff.init()...");
     liff
-      .init({ liffId: process.env.LIFF_ID })
+      .init({ liffId: process.env.NEXT_PUBLIC_LIFF_ID })
       .then(() => {
         console.log("liff.init() done");
         setLiffObject(liff);
       })
       .catch((error) => {
         console.log(`liff.init() failed: ${error}`);
-        if (!process.env.liffId) {
+        if (!process.env.NEXT_PUBLIC_LIFF_ID) {
           console.info(
-            "LIFF Starter: Please make sure that you provided `LIFF_ID` as an environmental variable."
+            "LIFF Starter: Please make sure that you provided `NEXT_PUBLIC_LIFF_ID` as an environmental variable."
           );
         }
         setLiffError(error.toString());
